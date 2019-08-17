@@ -1,0 +1,31 @@
+.login__container {
+    border: 1px solid #bbbbbb;
+    padding: 1.5em;
+    width: 400px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputForm {
+    padding: 1em;
+    width: 100%;
+    margin-bottom: 1em;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+}
+
+.submit {
+    padding: .5em;
+    font-size: .7em;
+    border: none;
+    outline: none;
+    width: 50%;
+    cursor: pointer;
+    border-radius: 5px;
+
+}
