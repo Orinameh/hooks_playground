@@ -1,7 +1,14 @@
 import React from 'react';
 // import Dropzone from './dropzone/Dropzone'
-import './App.css';
-import Login from './login/Login';
+// import './App.css';
+import './index.css';
+// import Login from './login/Login';
+import Navbar from './components/Navbar';
+import BookList from './components/BookList';
+import ThemeContextProvider from './context/ThemeContext';
+import ThemeToggle from './components/ThemeToggle';
+import AuthContextProvider from './context/AuthContext';
+import BookContextProvider from './context/BookContext';
 
 function App() {
   return (
@@ -9,7 +16,16 @@ function App() {
         {/* <div className="Card">
           <Dropzone onFilesAdded={console.log} />
         </div> */}
-        <Login />
+        {/* <Login /> */}
+        <ThemeContextProvider>
+            <AuthContextProvider>
+              <Navbar />
+              <BookContextProvider >
+                <BookList />
+              </BookContextProvider>
+              <ThemeToggle />
+            </AuthContextProvider>
+        </ThemeContextProvider>
       </div>
   );
 }

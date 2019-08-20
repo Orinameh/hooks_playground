@@ -105,6 +105,7 @@ const Login = () => {
                             type="text" 
                             placeholder="Username" 
                             value={username} 
+                            required
                             onChange={e => dispatch({ type: 'FIELD', field: 'username', value: e.currentTarget.value })}/>
                         <input
                             className="inputForm"
@@ -112,6 +113,7 @@ const Login = () => {
                             autoComplete="new-password"
                             placeholder="Password"
                             value={password} 
+                            required
                             onChange={e => dispatch({ type: 'FIELD', field: 'password', value: e.currentTarget.value })}
                         />
                         <button className="submit" type="submit" disabled={loading}>
